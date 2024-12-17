@@ -51,7 +51,7 @@
         bindings = <&kp SPACE>, <&kp UNDER>;
         mods = <(MOD_LSFT)>;
         keep-mods = <(MOD_LSFT)>;
-    }
+    };
 
     keymap {
         compatible = "zmk,keymap";

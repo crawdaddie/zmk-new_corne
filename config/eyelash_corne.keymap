@@ -44,6 +44,14 @@
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
         tap-ms = <30>;
     };
+    spc_undsc: spc_undsc {
+        compatible = "zmk,behavior-mod-morph";
+        label = "SPACE_UNDERSCORE";
+        #binding-cells = <0>;
+        bindings = <&kp SPACE>, <&kp UNDER>;
+        mods = <(MOD_LSFT)>;
+        keep-mods = <(MOD_LSFT)>;
+    }
 
     keymap {
         compatible = "zmk,keymap";

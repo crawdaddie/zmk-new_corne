@@ -61,30 +61,30 @@
             bindings = <
 &kp TAB    &kp Q  &kp W      &kp E     &kp R  &kp T                              &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &kp ESC    &kp A  &kp S      &kp D     &kp F  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &lt 2 B                   &kp SPACE  &kp DOWN            &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+&kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &lt 2 B     &kp SPACE             &kp DOWN            &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
                              &kp LGUI  &kp LEFT_SHIFT  &kp ESC                                         &lt 1 ENTER  &spc_undsc   &kp BSPC
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         lower_layer {
-            display-name = "NUMBER";
+            display-name = "SYMBOL";
             bindings = <
 &trans  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS                                          &mmv MOVE_UP                     &kp GRAVE     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND    &kp EQUAL  &kp HASH
 &trans  &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS                         &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCLAMATION  &kp AT     &trans
-&trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOLLAR        &kp C_MUTE                   &mmv MOVE_DOWN                  &kp ASTERISK  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT      &kp TILDE  &trans
-                                         &trans        &trans        &trans                                                                         &kp INS          &kp DEL          &trans
+&trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOLLAR    &kp C_MUTE                          &mmv MOVE_DOWN                  &kp ASTERISK    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT      &kp TILDE  &trans
+                                         &trans        &trans        &trans                                                                         &kp INS      &kp DEL          &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
 
         raise_layer {
-            display-name = "SYMBOL";
+            display-name = "NAV";
             bindings = <
-&sys_reset  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3     &bt BT_SEL 4                           &mmv MOVE_UP                    &kp LG(LS(TAB))  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LG(TAB)       &trans     &trans        &kp AMPERSAND    &kp EQUAL  &kp HASH
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5  &trans                    &mmv MOVE_DOWN                  &kp ASTERISK  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT      &kp TILDE  &trans
-                                    &trans     &trans     &kp SPACE                                                            &kp RET    &trans     &trans
+&sys_reset  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3     &bt BT_SEL 4                          &mmv MOVE_UP                        &kp LG(LS(TAB))  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LG(TAB)       &trans     &trans
+&trans  &bt BT_CLR          &mkp LCLK     &mkp MCLK     &mkp RCLK         &mkp MB4                  &mmv MOVE_LEFT  &mkp LCLK   &mmv MOVE_RIGHT     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &out OUT_USB        &out OUT_BLE  &none         &none             &mkp MB5                  &kp C_MUTE      &mmv MOVE_DOWN                  &kp ASTERISK  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT      &kp TILDE  &trans
+                                    &trans     &trans     &kp SPACE                                                                     &kp RET    &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };

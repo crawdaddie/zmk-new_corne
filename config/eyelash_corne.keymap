@@ -61,14 +61,25 @@
             bindings = <
 &kp TAB    &kp Q  &kp W      &kp E     &kp R  &kp T                              &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &kp ESC    &kp A  &kp S      &kp D     &kp F  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &lt 2 B     &kp SPACE             &kp DOWN            &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                             &kp LGUI  &kp LEFT_SHIFT  &kp ESC                                         &kp ENTER  &lt 1 &spc_undsc   &kp BSPC
+&kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &lt 3 B     &kp SPACE             &kp DOWN            &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                             &lt 1     &kp LEFT_SHIFT  &kp ESC                                         &kp ENTER  &lt 2 &spc_undsc   &kp BSPC
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         lower_layer {
             display-name = "SYMBOL";
+            bindings = <
+&kp LG(TAB)       &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS                                          &mmv MOVE_UP                     &kp GRAVE     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND    &kp EQUAL  &kp HASH
+&kp LG(LS(TAB))   &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS                         &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCLAMATION  &kp AT     &kp BACKSLASH
+&trans            &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOLLAR    &kp C_MUTE                          &mmv MOVE_DOWN                  &kp ASTERISK    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT      &kp TILDE  &kp PIPE
+                                              &trans        &trans        &trans                                                                         &kp INS      &kp DEL          &trans
+            >;
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        num_layer {
+            display-name = "NUM";
             bindings = <
 &trans  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS                                          &mmv MOVE_UP                     &kp GRAVE     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND    &kp EQUAL  &kp HASH
 &trans  &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS                         &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCLAMATION  &kp AT     &trans

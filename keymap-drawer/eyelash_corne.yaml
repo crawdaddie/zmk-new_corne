@@ -32,11 +32,11 @@ layers:
   - Z
   - X
   - C
-  - V
+  - {t: V, h: SYMBOL}
   - {t: B, h: NAV}
   - $$mdi:keyboard-space$$
   - $$mdi:arrow-down-bold$$
-  - N
+  - {t: N, h: SYMBOL}
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
@@ -45,7 +45,7 @@ layers:
   - LGUI
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:keyboard-esc$$
-  - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-space$$', s: _}
   - {t: '$$mdi:backspace$$', type: backspace}
   SYMBOL:
@@ -81,11 +81,11 @@ layers:
   - '0'
   - '1'
   - '2'
-  - '3'
+  - {t: '3', type: held}
   - $
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - '*'
+  - {t: '*', type: held alternate}
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - '%'
@@ -94,7 +94,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: INS, type: held}
+  - INS
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   NAV:

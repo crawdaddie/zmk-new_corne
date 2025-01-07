@@ -59,10 +59,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q  &kp W      &kp E     &kp R  &kp T                              &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp ESC    &kp A  &kp S      &kp D     &kp F  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &lt 3 B     &kp SPACE             &kp DOWN            &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                             &lt 1     &kp LEFT_SHIFT  &kp ESC                                         &kp ENTER  &lt 2 &spc_undsc   &kp BSPC
+&kp TAB    &kp Q  &kp W      &kp E     &kp R  &kp T                              &mo 1               &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSLH
+&kp ESC    &kp A  &kp S      &kp D     &kp F  &kp G                    &trans    &trans  &mo 1       &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &lt 3 B  &kp SPACE                 &trans              &lt 2 N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                             &kp LGUI  &kp LEFT_SHIFT  &kp ESC                                         &kp ENTER    &spc_undsc   &kp BSPC
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
@@ -70,10 +70,10 @@
         lower_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp LG(TAB)       &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS                                          &mmv MOVE_UP                     &kp GRAVE     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND    &kp EQUAL  &kp HASH
-&kp LG(LS(TAB))   &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS                         &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCLAMATION  &kp AT     &kp BACKSLASH
-&trans            &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOLLAR    &kp C_MUTE                          &mmv MOVE_DOWN                  &kp ASTERISK    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT      &kp TILDE  &kp PIPE
-                                              &trans        &trans        &trans                                                                         &kp INS      &kp DEL          &trans
+&kp LG(TAB)     &kp LG(Q)  &kp LG(W)     &kp LG(E)     &kp LG(R)  &kp LG(T)                           &mmv MOVE_UP                      &kp GRAVE     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND    &kp EQUAL  &kp HASH
+&kp LG(LS(TAB)) &kp LG(A)  &kp LG(S)     &kp LG(D)     &kp LG(F)  &kp LG(G)           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT   &kp MINUS     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCLAMATION  &kp AT     &trans
+&kp LCTRL       &kp LG(Z)  &kp LG(X)     &kp LG(C)     &kp LG(V)  &kp LG(B) &kp SPACE                 &mmv MOVE_DOWN                    &kp ASTERISK  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT      &kp TILDE  &kp PIPE
+                                  &trans     &kp LEFT_SHIFT  &kp ESC                                                                    &kp INS       &kp LG(SPACE)         &kp LG(L)
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -100,15 +100,5 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        layer_3 {
-            display-name = "Fn";
-            bindings = <
-&studio_unlock   &kp F1      &kp F2      &kp F3       &kp F4     &kp F5                                  &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
-&trans  &trans      &mkp LCLK   &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
-&trans  &sys_reset  &trans      &bootloader  &trans     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
-                                &trans      &trans      &trans                                                                   &trans       &trans     &trans
-            >;
-            sensor-bindings = <&scroll_encoder>;
-        };
     };
 };
